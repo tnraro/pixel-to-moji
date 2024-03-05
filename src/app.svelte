@@ -48,7 +48,7 @@
           data.length = value;
         } else if (value > rows) {
           for (let i = rows; i < value; i++)
-            data.push(([] as number[]).fill(0, 0, cols));
+            data.push(Array.from({ length: cols }, () => 0));
         }
         return;
       }
